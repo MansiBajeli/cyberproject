@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .container { background: #f0f0f0; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
+        h1 { color: #333; }
+        .success { color: green; }
+        .fail { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <p><strong>Status:</strong> {{ message }}</p>
+        {% if file_name %}
+            <p><strong>File Name:</strong> {{ file_name }}</p>
+            <p><strong>File Hash:</strong> {{ file_hash }}</p>
+        {% endif %}
+        <a href="{{ url_for('home') }}">⬅️ Go Back</a>
+    </div>
+</body>
+</html>

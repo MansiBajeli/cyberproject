@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .block { background: #f9f9f9; padding: 10px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <h1>Blockchain</h1>
+    {% for block in blockchain %}
+        <div class="block">
+            <p><strong>File Name:</strong> {{ block.file_name }}</p>
+            <p><strong>Hash:</strong> {{ block.file_hash }}</p>
+            <p><strong>Previous Hash:</strong> {{ block.previous_hash }}</p>
+        </div>
+    {% endfor %}
+    <a href="{{ url_for('home') }}">⬅️ Go Back</a>
+</body>
+</html>
